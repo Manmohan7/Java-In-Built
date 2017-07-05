@@ -6,13 +6,13 @@ class Array {
         int[] arr = {5, 8, 2, 6, 7, 20};
 
         // binarySearch(int[] arr, int key) - returns index
-        // if not found, returns - index - 1
+        // if not found, returns -(index) - 1
         // binary search is valid in sorted array
         Arrays.binarySearch(arr, 2);
 
         // binarySearch(int[] arr, int start, int end, int key)
         // returns index
-        // if not found, returs - index - 1
+        // if not found, returs -(index) - 1
         // throws IllegalArgument Exception if start > end
         // throws ArrayindexOutOfBounds if start < 0 || end > arr.length
         Arrays.binarySearch(arr, 0, arr.length, 4);
@@ -25,10 +25,10 @@ class Array {
         Arrays.copyOf(arr, 10);
 
         // copyOfRange(int[] arr, int from, int to) - returns int[]
-        // throws ArrayIndexOutOfBounds - if from < 0 || from > arr.length
+        // throws ArrayIndexOutOfBounds - if from < 0 || to > arr.length
         // throws IllegalArgument Exception - if from > to
         // throws NullPointerException - if arr is null
-        Arrays.copyOfRangr(arr, 2, 5);
+        Arrays.copyOfRange(arr, 2, 5);
 
         // equals(int[] a1, int[] a2) - returns boolean
         // returns true if both arrays contains same no of
