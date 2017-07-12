@@ -20,28 +20,28 @@ class Stringbuilder {
         sb.append(str);
         sb.append(" World");
         sb.append(21);
-        System.out.println(sb);
+        System.out.println("append - " + sb);
 
         // capacity() - returns int
         // tells the capacity of the StringBuilder object
-        System.out.println(sb.capacity());
+        System.out.println("capacity - " + sb.capacity());
 
         // charAt(int index) - returns char
         // returns the char present at index
         // throws IndexOutOfBoundsException if index > length
-        System.out.println(sb.charAt(2));
+        System.out.println("charAt - " + sb.charAt(2));
 
         // delete(int start, int end) - returns StringBuilder
         // deletes all the elements starting from start (inclusive) to end (exclusive)
         // if start == end then no change is done
         // throws StringIndexOutOfBounds Exception if start is negative or
         // start > length or start > end
-        System.out.println(sb.delete(0, 6));
+        System.out.println("delete - " + sb.delete(0, 6));
 
         // deleteCharAt(int index) - returns StringBuilder
         // deletes char at index
         // throws StringIndexOutOfBounds Exception if index is negative or > or = to length
-        System.out.println(sb.deleteCharAt(5));
+        System.out.println("deleteCharAt - " + sb.deleteCharAt(5));
 
         // ensureCapacity(int minimum) - returns void
         // ensures the capacity is atleast equal to the minimum specified
@@ -57,93 +57,94 @@ class Stringbuilder {
         // srcBegin > srcEnd || srcEnd > this.length || destBegin + srcEnd - srcBegin > dest.length
         char[] arr = new char[20];
         sb.getChars(0, 5, arr, 0);
+        System.out.print("getChars - ");
         System.out.println(arr);
 
         // indexOf(String str) - returns int
         // returns the index of starting position of substring if str exsists in stringBuilder
         // if not found returns -1
         // throws NullPointer Exception if str == null
-        System.out.println(sb.indexOf("ld"));
+        System.out.println("indexOf - " + sb.indexOf("ld"));
 
         // indexOf(String str, int begin) - returns int
         // returns the index of starting position of str if str is found in stringBuilder starting 
         // from begin
         // else returns -1
         // throws NullPointer Exception if str == null
-        System.out.println(sb.indexOf("ld", 1));
+        System.out.println("indexOf - " + sb.indexOf("ld", 1));
 
         // insert(int index, String str) - returns StringBuilder
         // inserts the specified string at index in the StringBuilder
         // throws StringIndexOutOfBounds if index < 0 || index > stringbuilder.length()
-        System.out.println(sb.insert(5, "Yes"));
+        System.out.println("insert - " + sb.insert(5, "Yes"));
 
         // insert(int index, char[] str, int strBegin, int strLength) - returns StringBuilder
         // inserts the chars of str from strBegin upto strLength in StringBuilder at specified index
         // throws StringIndexOutOfBounds if index < 0 || index > length || strBegin < 0 ||
         // strLength < 0 || strBegin + strLength > str.length
         arr = new char[] {'H', 'e', 'l', 'l', 'o', ' '};
-        System.out.println(sb.insert(0, arr, 0, arr.length));
+        System.out.println("insert - " + sb.insert(0, arr, 0, arr.length));
 
         // lastIndexOf(String str) - returns int
         // returns the index of last occurenece of str
         // if not found it returns -1
         // throws NullPointer Exception if str == null
-        System.out.println(sb.lastIndexOf("ll"));
+        System.out.println("lastIndexOf - " + sb.lastIndexOf("ll"));
 
         // lastIndexOf(String str, int index) - returns int
         // returns the index of last occurence of str starting from index in StringBuilder
         // returns -1 if not found
         // throws NullPointer Exception if str == null
-        System.out.println(sb.lastIndexOf("ll", 9));
+        System.out.println("lastIndexOf - " + sb.lastIndexOf("ll", 9));
 
         // length() - returns int
         // returns the length of the StringBuilder
-        System.out.println(sb.length());
+        System.out.println("length - " + sb.length());
 
         // replace(int start, int end, String str) - returns StringBuilder
         // removes the sequence from start (inclusive) till end (exclusive) and adds
         // str at index start
         // throws StringIndexOutOfBounds if start < 0 || start > end || start > length
-        System.out.println(sb.replace(0, 5, "Hola"));
+        System.out.println("replace - " + sb.replace(0, 5, "Hola"));
 
         // reverse() - returns StringBuilder
         // reverses the sequence of the StringBuilder
-        System.out.println(sb.reverse());
+        System.out.println("reverse - " + sb.reverse());
 
         // setCharAt(int index, char ch) - returns void
         // sets the char at index to char ch
         // throws IndexOutOfBounds Exception if index < 0 || index >= length
         sb.setCharAt(0, '7');
-        System.out.println(sb);
+        System.out.println("setCharAt - " + sb);
 
         // setLength(int newLength) - returns void
         // sets the length of the stringBuilder to newLength
         // by truncating it or inserting null
         // throws IndexOutOfBounds Exception if newLength < 0
-        sb.setLength(5);
-        System.out.println(sb);
+        sb.setLength(4);
+        System.out.println("setLength - " + sb);
 
         // substring(int start) - returns String
         // returns a new String with characters starting from start (inclusive) in stringBuilder
         // throws StirngIndexOutOfBounds Exception if start < 0 || start > length
-        sb.substring(2);
-        System.out.println(sb);
+        sb.substring(1);
+        System.out.println("substring - " + sb);
 
         // substring(int start, int end) - returns String
         // returns String from start (inclusive) to end (exclusive) in StirngBuilder
         // throws StringIndexOutOfBounds if start < 0 || start > end || start > length || 
         // end < 0 || end > length
-        System.out.println(sb.substring(0, 3));
+        System.out.println("substring - " + sb.substring(1, 4));
 
         // toString() - returns String
         // returns a new String with the contents of current stringBuilder
-        System.out.println(sb.toString());
+        System.out.println("toStirng - " + sb.toString());
 
         // trimToSize() - returns void
         // tries to remove unallocated memory
         // may affect the value returned by capacity
-        System.out.println(sb.capacity());
+        System.out.println("Before trimToSize - " + sb.capacity());
         sb.trimToSize();
-        System.out.println(sb.capacity());
+        System.out.println("After trimToSize - " + sb.capacity());
     }
 }
