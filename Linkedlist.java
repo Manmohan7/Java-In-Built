@@ -7,11 +7,14 @@ class Linkedlist
     public static void main(String[] args)
     {
         // constructor
-        LinkedList l = new LinkedList();    // LinkedList<String> l = new LinkedList<String>();
+        // LinkedList<String> l = new LinkedList<String>();
+        LinkedList l = new LinkedList();    
 
         // copy constructor
-        LinkedList ll = new LinkedList(l);    // creates a list containing elements of collection 
-                                              // in the order they are returned by Collection's iterator
+        // creates a list containing elements of collection 
+        // in the order they are returned by Collection's iterator
+        LinkedList ll = new LinkedList(l);    
+        
 
         // Copy Constructor
         Collection col1 = new LinkedList(ll);
@@ -26,24 +29,28 @@ class Linkedlist
         System.out.println("List 1 " + l);
 
         // add(index, element) - returns void
+        // add at specified position
         // if index is out of bounds throws IndexOutOfBoundsException
-        l.add(0,"0");    // add at specified position
+        l.add(0,"0");    
         l.add(1,"1");
         System.out.println("Element added at index " + l);
 
         // addFirst(element) - returns void
-        l.addFirst("f");    // add at first position
+        // add at first position
+        l.addFirst("f");    
 
         // addLast(element) - returns void
-        l.addLast("l");    // add at last position
+        // add at last position
+        l.addLast("l");    
         System.out.println("Elements added at first and last " + l);
 
         // addAll(Collection c) - returns boolean
+        // add a list at back
         // throws NullPointerException is collection is empty
         Collection col2 = new ArrayList();
         col2.add("arr");
         col2.add(1);
-        l.addAll(col2);    // add a list at back
+        l.addAll(col2);    
         System.out.println("Collection added " + l);
 
         // addAll(Collection c) - returns boolean
@@ -56,21 +63,24 @@ class Linkedlist
         System.out.println("Collection added " + l);
 
         // addAll(index, collection) - returns boolean
+        // add a list at a particular index
         // throws IndexOutOfBoundsException and NUllPointerException
         ArrayList col4 = new ArrayList();
         col4.add("arr");
         col4.add(2);
-        l.addAll(0, col4);    // add a list at a particular index
+        l.addAll(0, col4);    
         System.out.println("Collection added at index " + l);
 
         // clear() - returns void
-        col2.clear();    // removes all the elements
+        // removes all the elements
+        col2.clear();    
         System.out.println("Clear " + col2);
 
         // clone() - returns Object
+        // make a clone a list
         // returns a shallow copy. new list is not affected by the old list once created
         Collection col5 = new LinkedList();
-        col5 = (LinkedList) col3.clone();    // make a clone a list col3
+        col5 = (LinkedList) col3.clone();    
         System.out.println("Clone " + col5);
 
         // contains(element) - returns boolean
