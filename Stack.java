@@ -31,7 +31,9 @@ class stack
         // throws EmptyStackException is stack is empty
         System.out.println("Popped Element " + s.pop());
 
-        // search(element) - returns int counting from 1 and top of stack
-        System.out.println("Search Element Position " + s.search(2));    // if not found returns -1
+        // search(element) - returns int 
+        // counting from 1 and top of stack
+        // if not found returns -1
+        System.out.println("Search Element Position " + s.search(2));   
     }	
 }
