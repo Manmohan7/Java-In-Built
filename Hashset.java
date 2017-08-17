@@ -13,7 +13,7 @@ class Hashset {
         col.add('a');
         col.add('b');
         HashSet hs2 = new HashSet(col);
-        System.out.println(hs2);
+        System.out.println("Constructor - " + hs2);
 
         // HashSet(int capacity)
         // creates an empty hashset and backing hashmap with specified initial capacity
@@ -34,12 +34,12 @@ class Hashset {
         hs1.add(2);
         hs1.add(4);
         hs1.add(8);
-        System.out.println(hs1);
+        System.out.println("Add - " + hs1);
 
         // clear() - returns void
         // removes all the elements from the list
         hs1.clear();
-        System.out.println(hs1);
+        System.out.println("Clear - " + hs1);
 
         hs1.add(5);
         hs1.add(8);
@@ -51,19 +51,20 @@ class Hashset {
         // clone() - returns Object
         // returns a shallow copy of the HashSet instance
         HashSet hs5 = (HashSet) hs1.clone();
-        System.out.println(hs5);
+        System.out.println("Clone - " + hs5);
 
         // contains(Object) - returns boolean
         // checks if the element is present or not
-        System.out.println(hs1.contains(2));
+        System.out.println("Contains - " + hs1.contains(2));
 
         // isEmpty() - returns boolean
         // returns wheather the set is empty or not
-        System.out.println(hs2.isEmpty());
+        System.out.println("isEmpty - " + hs2.isEmpty());
 
         // iterator() - returns Iterator
         // returns an iterator over the elements of set in no particular order
         Iterator itr = hs1.iterator();
+        System.out.println("Iterator - ");
         while(itr.hasNext()) {
             System.out.print(itr.next() + " ");
         }
@@ -71,10 +72,10 @@ class Hashset {
 
         // remove(Object) - returns boolean
         // removes the element from the set if it exists and returns if it was removed
-        System.out.println(hs1.remove(5));
+        System.out.println("Remove - " + hs1.remove(5));
 
         // size() - returns int
         // returns the no of elements in the set also known as cardinality
-        System.out.println(hs1.size());
+        System.out.println("Size - " + hs1.size());
     }
 }
