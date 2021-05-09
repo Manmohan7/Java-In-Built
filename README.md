@@ -1,2 +1,3 @@
 # Java-In-Built
-Code of the classes that are already defined in Java language with all their methods implemented.
+
+Trying out all the default methods provided by Java for different data structures along with their output.
